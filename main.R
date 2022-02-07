@@ -5,7 +5,7 @@ library(readr)
 library(stringr)
 # library(purrr)
 
-
+#Sriramteja Veerisetti
 # ----------------------- Helper Functions to Implement ------------------------
 
 #' Read the expression data "csv" file.
@@ -209,12 +209,12 @@ summarize_expression <- function(exprs) {
   
   combination <- readr::read_delim("data/example_intensity_data.csv") 
     Df <- as.data.frame(combination)
-    Df$row_var = rowVars(as.matrix(Df[,c(2,3,4)]))
-    Df$row_means = rowMeans(as.matrix(Df[,c(2,3,4)]))
+    Df$row_var = rowVars(as.matrix(Df[,c(2:36)]))
+    Df$row_means = rowMeans(as.matrix(Df[,c(2:36)]))
    
     Df2 <- Df[, c("probe", "row_var", "row_means")]
     
-    head(Df2)
+    head(Df2) %>%
     
   
   return ()
